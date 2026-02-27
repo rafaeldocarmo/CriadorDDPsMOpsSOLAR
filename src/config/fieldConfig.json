@@ -30,7 +30,7 @@
     "type": "text",
     "required": true,
     "span": 3,
-    "placeholder": "Ex: DFT - Operacao XYZ"
+    "placeholder": "SOLAR - JORNADA - ACAO REALIZADA - PROBLEMA - SOLUCAO"
   },
   {
     "section": "Informacoes DFT",
