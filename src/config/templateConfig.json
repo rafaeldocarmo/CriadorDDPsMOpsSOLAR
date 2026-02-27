@@ -1,0 +1,13 @@
+[
+  {
+    "id": "template-padrao",
+    "name": "Template Padrão",
+    "path": "/templates/template-padrao.docx"
+  },
+  {
+    "id": "template-alternativo",
+    "name": "Template Alternativo",
+    "path": "/templates/template-alternativo.docx",
+    "outputPrefix": "ALT"
+  }
+]

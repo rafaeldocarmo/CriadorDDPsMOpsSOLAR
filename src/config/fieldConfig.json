@@ -1,0 +1,133 @@
+[
+  {
+    "section": "Dados Analista",
+    "name": "nomeAnalista",
+    "label": "Nome do Analista",
+    "type": "text",
+    "required": true,
+    "placeholder": "Ex: Maria Silva"
+  },
+  {
+    "section": "Dados Analista",
+    "name": "celAnalista",
+    "label": "Celular do Analista",
+    "type": "text",
+    "required": true,
+    "placeholder": "Ex: (11) 99999-9999"
+  },
+  {
+    "section": "Dados Analista",
+    "name": "emailAnalista",
+    "label": "Email do Analista",
+    "type": "email",
+    "required": true,
+    "placeholder": "Ex: analista@empresa.com"
+  },
+  {
+    "section": "Informacoes DFT",
+    "name": "nomeDFT",
+    "label": "Nome da DFT",
+    "type": "text",
+    "required": true,
+    "span": 3,
+    "placeholder": "Ex: DFT - Operacao XYZ"
+  },
+  {
+    "section": "Informacoes DFT",
+    "name": "descricao",
+    "label": "Descrição",
+    "type": "textarea",
+    "required": true,
+    "span": 3,
+    "rows": 5,
+    "placeholder": "Descreva o cenario e contexto da demanda."
+  },
+  {
+    "section": "Informacoes DFT",
+    "name": "perfilOperador",
+    "label": "Perfil do Operador",
+    "type": "text",
+    "required": true
+  },
+  {
+    "section": "Informacoes DFT",
+    "name": "loginOperador",
+    "label": "Login do Operador",
+    "type": "text",
+    "required": true
+  },
+  {
+    "section": "Informacoes DFT",
+    "name": "jornada",
+    "label": "Jornada",
+    "type": "text",
+    "required": true
+  },
+  {
+    "section": "Informacoes DFT",
+    "name": "tipoContrato",
+    "label": "Tipo de Contrato",
+    "type": "select",
+    "required": true,
+    "options": [
+      {
+        "label": "Residencial",
+        "value": "Residencial"
+      },
+      {
+        "label": "Multi",
+        "value": "Multi"
+      },
+      {
+        "label": "Movel",
+        "value": "Movel"
+      }
+    ]
+  },
+  {
+    "section": "Informacoes DFT",
+    "name": "cpfCliente",
+    "label": "CPF do Cliente",
+    "type": "text",
+    "required": true,
+    "placeholder": "Ex: 000.000.000-00"
+  },
+  {
+    "section": "Informacoes DFT",
+    "name": "casoSolar",
+    "label": "Caso Solar",
+    "type": "text",
+    "required": true
+  },
+  {
+    "section": "Informacoes DFT",
+    "name": "chamadoOperador",
+    "label": "Chamado do Operador",
+    "type": "text",
+    "required": true
+  },
+  {
+    "section": "Passo a Passo",
+    "name": "passoapasso",
+    "label": "Passo a Passo",
+    "type": "analysisBlocks",
+    "required": true,
+    "allowedTypes": [
+      "image"
+    ],
+    "addImageLabel": "Adicionar passo com imagem"
+  },
+  {
+    "section": "Análise",
+    "name": "analise",
+    "label": "Análise",
+    "type": "analysisBlocks",
+    "required": true,
+    "allowedTypes": [
+      "text",
+      "image"
+    ],
+    "addTextLabel": "Adicionar bloco de texto",
+    "addImageLabel": "Adicionar bloco com imagem"
+  }
+]
