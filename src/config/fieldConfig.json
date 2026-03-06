@@ -87,7 +87,7 @@
   {
     "section": "Informacoes DFT",
     "name": "cpfCliente",
-    "label": "CPF do Cliente",
+    "label": "CPF/CNPJ do Cliente",
     "type": "text",
     "required": true,
     "placeholder": "Ex: 000.000.000-00"

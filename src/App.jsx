@@ -121,10 +121,31 @@ function App() {
     }
   };
 
+  const sectionsToClear = ["Informacoes DFT", "Passo a Passo", "Análise"];
+  const handleClearDftStepsAndAnalysis = () => {
+    const fieldNamesToClear = fieldConfig
+      .filter((f) => sectionsToClear.includes(f.section))
+      .map((f) => f.name);
+    const nextValues = { ...values };
+    fieldConfig
+      .filter((f) => fieldNamesToClear.includes(f.name))
+      .forEach((f) => {
+        nextValues[f.name] = f.type === "analysisBlocks" ? [] : "";
+      });
+    setValues(nextValues);
+    saveFormData(nextValues);
+    setErrors((prev) => {
+      const next = { ...prev };
+      fieldNamesToClear.forEach((name) => delete next[name]);
+      return next;
+    });
+    setStatus("Informacoes DFT, Passo a Passo e Analise foram limpos.");
+  };
+
   return (
     <main className="layout">
       <header className="hero">
-        <h1>Gerador de Documentos Tecnicos - MOps Solar</h1>
+        <h1>Gerador de Documentos Técnicos - MOps Solar</h1>
         <p>
           Preencha as variaveis, selecione o template e baixe o arquivo final em formato
           <code> .docx</code>.
@@ -145,6 +166,7 @@ function App() {
         onSubmit={handleSubmit}
         isSubmitting={isSubmitting}
         onCopySummary={handleCopySummary}
+        onClearDftStepsAndAnalysis={handleClearDftStepsAndAnalysis}
       />
 
       <DocumentPreview fields={fieldConfig} values={values} />

@@ -18,13 +18,24 @@ function DynamicForm({
   onFieldChange,
   onSubmit,
   isSubmitting,
-  onCopySummary
+  onCopySummary,
+  onClearDftStepsAndAnalysis
 }) {
   const groupedFields = groupFieldsBySection(fields);
 
   return (
     <form className="card" onSubmit={onSubmit}>
-      <h2>Dados Variáveis</h2>
+      <div className="form-header-row">
+        <h2>Dados Variáveis</h2>
+        <button
+          className="btn-limpar"
+          type="button"
+          onClick={onClearDftStepsAndAnalysis}
+          disabled={isSubmitting}
+        >
+          Limpar
+        </button>
+      </div>
       <p className="muted">Preencha os campos abaixo para gerar o documento.</p>
 
       {Object.entries(groupedFields).map(([section, sectionFields]) => (
