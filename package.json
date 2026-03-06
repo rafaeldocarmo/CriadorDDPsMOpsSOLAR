@@ -9,6 +9,7 @@
     "preview": "node ./node_modules/vite/bin/vite.js preview"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "docxtemplater": "^3.66.5",
     "docxtemplater-image": "^0.1.2",
     "pizzip": "^3.2.0",

@@ -7,6 +7,7 @@ import templates from "./config/templateConfig.json";
 import { validateFields } from "./utils/validators";
 import { generateDocumentBlob, downloadBlob } from "./services/docxService";
 import { loadFormData, saveFormData } from "./services/storageService";
+import { Analytics } from '@vercel/analytics/react';
 
 function getAutomaticData() {
   const now = new Date();
@@ -172,6 +173,7 @@ function App() {
       <DocumentPreview fields={fieldConfig} values={values} />
 
       {status ? <p className="status">{status}</p> : null}
+      <Analytics mode="production"/>
     </main>
   );
 }
